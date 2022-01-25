@@ -1,15 +1,22 @@
 function compute()
 {
-    var p = document.getElementById("principal").value; 
-    var r = document.getElementById("rate").value;
-    var t = document.getElementById("years").value;
-    var nt = 2020 + parseInt(t); 
-    var si = parseInt((p*t*r)/100);
+    var principal = document.getElementById("principal").value; 
+    var rate = document.getElementById("rate").value;
+    var years = document.getElementById("years").value;
     
-    document.getElementById("result").innerHTML = 
-    "If you deposit " + p + ", <br/>" +
-    "at an interest rate of " + r + "%. <br/>" +
-    "You will receive an amount of " + si + ", <br/>" +
-    "in the year " + nt;
+    if(principal<= 0){
+        alert("Enter a positive integer");
+        document.getElementById("principal").focus();
+    }
+    else{
+        var year = 2020 + parseInt(years); 
+        var si = parseInt((principal*years*rate)/100);
+        document.getElementById("result").innerHTML = 
+        "If you deposit <span class='highlight'>" + principal + "</span>, <br/>" +
+        "at an interest rate of <span class='highlight'>" + rate + "%</span> . <br/>" +
+        "You will receive an amount of <span class='highlight'>" + si + "</span>, <br/>" +
+        "in the year <span class='highlight'>" + year +"</span>";
+    }
+    
 }
         
