@@ -1,4 +1,38 @@
-body {background-color:tan;}
-h1{color:green;}
+body {
+    background-color:black;
+    font-family:sans-serif;
+    font-size: 20px;
+}
 
+h1{
+    color:grey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 3.5rem;
+    font-weight: bolder;
+    text-align:center;
+}
 
+p{
+    font-weight: bolder;
+}
+
+.form__container{
+    background-color:white;
+    margin: 0 8%;
+    padding:2%;
+    border-radius: 20px;
+}
+
+.form__inputs{
+    margin:auto;
+    width:50%;
+}
+
+table {
+    font-size: 20px;
+}
+
+table tr label,input{
+    margin: 10px;
+    padding: 5px;
+}
